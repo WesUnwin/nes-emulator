@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3A9DABCE-02A6-4003-BB2A-7FC8811282E9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NES</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>A:\PROJECTS\NES Emulator\INPUT\Debug;A:\PROJECTS\NES Emulator\CART\Debug;A:\PROJECTS\NES Emulator\CPU\Debug;A:\PROJECTS\NES Emulator\PPU\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PPU.lib;CPU.lib;CART.lib;INPUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\apu\APU.h" />
+    <ClInclude Include="src\core\apu\AudioChannel.h" />
+    <ClInclude Include="src\core\apu\DMChannel.h" />
+    <ClInclude Include="src\core\apu\FrameSequencer.h" />
+    <ClInclude Include="src\core\apu\NoiseChannel.h" />
+    <ClInclude Include="src\core\apu\SoundPlayer.h" />
+    <ClInclude Include="src\core\apu\SquareWaveGenerator.h" />
+    <ClInclude Include="src\core\apu\TriangleWaveGenerator.h" />
+    <ClInclude Include="src\core\cart\CartMapper.h" />
+    <ClInclude Include="src\core\cart\iNesFileFormatException.h" />
+    <ClInclude Include="src\core\cart\iNesRom.h" />
+    <ClInclude Include="src\core\cart\Mapper0.h" />
+    <ClInclude Include="src\core\cart\Mapper1.h" />
+    <ClInclude Include="src\core\cart\MapperList.h" />
+    <ClInclude Include="src\core\cpu\CPU.h" />
+    <ClInclude Include="src\core\cpu\AddressModes.h" />
+    <ClInclude Include="src\core\cpu\InvalidOpcodeException.h" />
+    <ClInclude Include="src\core\cpu\InvalidOpcodeHandler.h" />
+    <ClInclude Include="src\core\cpu\Opcodes.h" />
+    <ClInclude Include="src\core\cpu\OperationsHelpers.h" />
+    <ClInclude Include="src\core\cpu\Operations_A_to_B.h" />
+    <ClInclude Include="src\core\cpu\Operations_C_to_I.h" />
+    <ClInclude Include="src\core\cpu\Operations_Undoc_A_to_L.h" />
+    <ClInclude Include="src\core\cpu\Operations_J_to_P.h" />
+    <ClInclude Include="src\core\cpu\Operations_R_to_T.h" />
+    <ClInclude Include="src\core\cpu\CPUReadWriteListener.h" />
+    <ClInclude Include="src\core\cpu\CPUState.h" />
+    <ClInclude Include="src\core\cpu\CPUGlobals.h" />
+    <ClInclude Include="src\core\cpu\Operations_Undoc_M_to_Z.h" />
+    <ClInclude Include="src\core\Emu.h" />
+    <ClInclude Include="src\core\input\Control.h" />
+    <ClInclude Include="src\core\input\InputCollector.h" />
+    <ClInclude Include="src\core\input\InputDevice.h" />
+    <ClInclude Include="src\core\input\InputSystem.h" />
+    <ClInclude Include="src\core\input\StandardPad.h" />
+    <ClInclude Include="src\core\ppu\AddressSpace.h" />
+    <ClInclude Include="src\core\ppu\DataFetching.h" />
+    <ClInclude Include="src\core\ppu\DefaultMasterPalette.h" />
+    <ClInclude Include="src\core\ppu\DrawSprites.h" />
+    <ClInclude Include="src\core\ppu\FrameSequence.h" />
+    <ClInclude Include="src\core\ppu\Globals.h" />
+    <ClInclude Include="src\core\ppu\Multiplexer.h" />
+    <ClInclude Include="src\core\ppu\PPU.h" />
+    <ClInclude Include="src\core\ppu\PPUState.h" />
+    <ClInclude Include="src\core\ppu\Renderer.h" />
+    <ClInclude Include="src\core\ppu\ScanlineRoutines.h" />
+    <ClInclude Include="src\core\ppu\ScrollCounterOps.h" />
+    <ClInclude Include="src\core\ppu\SpriteEvaluation.h" />
+    <ClInclude Include="src\platform\win32\GDIRenderer.h" />
+    <ClInclude Include="src\platform\win32\MainDialog.h" />
+    <ClInclude Include="src\platform\win32\NES.h" />
+    <ClInclude Include="src\platform\win32\Resource.h" />
+    <ClInclude Include="src\platform\win32\RomLoader.h" />
+    <ClInclude Include="src\platform\win32\targetver.h" />
+    <ClInclude Include="src\platform\win32\WaveOutSoundPlayer.h" />
+    <ClInclude Include="src\platform\win32\Win32InputCollector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\apu\APU.cpp" />
+    <ClCompile Include="src\core\apu\AudioChannel.cpp" />
+    <ClCompile Include="src\core\apu\DMChannel.cpp" />
+    <ClCompile Include="src\core\apu\FrameSequencer.cpp" />
+    <ClCompile Include="src\core\apu\NoiseChannel.cpp" />
+    <ClCompile Include="src\core\apu\SoundPlayer.cpp" />
+    <ClCompile Include="src\core\apu\SquareWaveGenerator.cpp" />
+    <ClCompile Include="src\core\apu\TriangleWaveGenerator.cpp" />
+    <ClCompile Include="src\core\cart\CartMapper.cpp" />
+    <ClCompile Include="src\core\cart\iNesFileFormatException.cpp" />
+    <ClCompile Include="src\core\cart\iNesRom.cpp" />
+    <ClCompile Include="src\core\cart\Mapper0.cpp" />
+    <ClCompile Include="src\core\cart\Mapper1.cpp" />
+    <ClCompile Include="src\core\cart\MapperList.cpp" />
+    <ClCompile Include="src\core\cpu\CPU.cpp" />
+    <ClCompile Include="src\core\cpu\AddressModes.cpp" />
+    <ClCompile Include="src\core\cpu\InvalidOpcodeException.cpp" />
+    <ClCompile Include="src\core\cpu\InvalidOpcodeHandler.cpp" />
+    <ClCompile Include="src\core\cpu\Opcodes.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_A_to_B.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_C_to_I.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_Undoc_A_to_L.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_J_to_P.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_R_to_T.cpp" />
+    <ClCompile Include="src\core\cpu\CPUReadWriteListener.cpp" />
+    <ClCompile Include="src\core\cpu\CPUState.cpp" />
+    <ClCompile Include="src\core\cpu\Operations_Undoc_M_to_Z.cpp" />
+    <ClCompile Include="src\core\Emu.cpp" />
+    <ClCompile Include="src\core\input\Control.cpp" />
+    <ClCompile Include="src\core\input\InputCollector.cpp" />
+    <ClCompile Include="src\core\input\InputDevice.cpp" />
+    <ClCompile Include="src\core\input\InputSystem.cpp" />
+    <ClCompile Include="src\core\input\StandardPad.cpp" />
+    <ClCompile Include="src\core\ppu\AddressSpace.cpp" />
+    <ClCompile Include="src\core\ppu\DataFetching.cpp" />
+    <ClCompile Include="src\core\ppu\DrawSprites.cpp" />
+    <ClCompile Include="src\core\ppu\FrameSequence.cpp" />
+    <ClCompile Include="src\core\ppu\Multiplexer.cpp" />
+    <ClCompile Include="src\core\ppu\PPU.cpp" />
+    <ClCompile Include="src\core\ppu\PPUState.cpp" />
+    <ClCompile Include="src\core\ppu\Renderer.cpp" />
+    <ClCompile Include="src\core\ppu\ScanlineRoutines.cpp" />
+    <ClCompile Include="src\core\ppu\ScrollCounterOps.cpp" />
+    <ClCompile Include="src\core\ppu\SpriteEvaluation.cpp" />
+    <ClCompile Include="src\platform\win32\GDIRenderer.cpp" />
+    <ClCompile Include="src\platform\win32\MainDialog.cpp" />
+    <ClCompile Include="src\platform\win32\NES.cpp" />
+    <ClCompile Include="src\platform\win32\RomLoader.cpp" />
+    <ClCompile Include="src\platform\win32\WaveOutSoundPlayer.cpp" />
+    <ClCompile Include="src\platform\win32\Win32InputCollector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\platform\win32\NES.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\platform\win32\NES.ico" />
+    <Image Include="src\platform\win32\small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

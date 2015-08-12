@@ -1,0 +1,121 @@
+﻿Build started 14/07/2015 7:48:00 PM.
+     1>Project "A:\PROJECTS\NES Emulator\NES\NES\NES.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\core\apu\APU.cpp src\core\apu\AudioChannel.cpp src\core\apu\DMChannel.cpp src\core\apu\FrameSequencer.cpp src\core\apu\NoiseChannel.cpp src\core\apu\SoundPlayer.cpp src\core\apu\SquareWaveGenerator.cpp src\core\apu\TriangleWaveGenerator.cpp src\core\cart\CartMapper.cpp src\core\cart\iNesFileFormatException.cpp src\core\cart\iNesRom.cpp src\core\cart\Mapper0.cpp src\core\cart\Mapper1.cpp src\core\cart\MapperList.cpp src\core\cpu\CPU.cpp src\core\cpu\AddressModes.cpp src\core\cpu\InvalidOpcodeException.cpp src\core\cpu\InvalidOpcodeHandler.cpp src\core\cpu\Opcodes.cpp src\core\cpu\Operations_A_to_B.cpp src\core\cpu\Operations_C_to_I.cpp src\core\cpu\Operations_Undoc_A_to_L.cpp src\core\cpu\Operations_J_to_P.cpp src\core\cpu\Operations_R_to_T.cpp src\core\cpu\CPUReadWriteListener.cpp src\core\cpu\CPUState.cpp src\core\cpu\Operations_Undoc_M_to_Z.cpp src\core\Emu.cpp src\core\input\Control.cpp src\core\input\InputCollector.cpp src\core\input\InputDevice.cpp src\core\input\InputSystem.cpp src\core\input\StandardPad.cpp src\core\ppu\AddressSpace.cpp src\core\ppu\DataFetching.cpp src\core\ppu\DrawSprites.cpp src\core\ppu\FrameSequence.cpp src\core\ppu\Multiplexer.cpp src\core\ppu\PPU.cpp src\core\ppu\PPUState.cpp src\core\ppu\Renderer.cpp src\core\ppu\ScanlineRoutines.cpp src\core\ppu\ScrollCounterOps.cpp src\core\ppu\SpriteEvaluation.cpp src\platform\win32\GDIRenderer.cpp src\platform\win32\MainDialog.cpp src\platform\win32\NES.cpp src\platform\win32\RomLoader.cpp src\platform\win32\WaveOutSoundPlayer.cpp src\platform\win32\Win32InputCollector.cpp
+         Win32InputCollector.cpp
+         WaveOutSoundPlayer.cpp
+         RomLoader.cpp
+         NES.cpp
+         MainDialog.cpp
+         GDIRenderer.cpp
+         SpriteEvaluation.cpp
+         ScrollCounterOps.cpp
+         ScanlineRoutines.cpp
+         Renderer.cpp
+         PPUState.cpp
+         PPU.cpp
+         Multiplexer.cpp
+         FrameSequence.cpp
+         DrawSprites.cpp
+         DataFetching.cpp
+         AddressSpace.cpp
+         StandardPad.cpp
+     1>a:\projects\nes emulator\nes\nes\src\core\input\standardpad.cpp(6): warning C4413: 'StandardPad::description' : reference member is initialized to a temporary that doesn't persist after the constructor exits
+                 a:\projects\nes emulator\nes\nes\src\core\input\standardpad.h(25) : see declaration of 'StandardPad::description'
+         InputSystem.cpp
+         InputDevice.cpp
+         Generating Code...
+         Compiling...
+         InputCollector.cpp
+         Control.cpp
+         Emu.cpp
+         Operations_Undoc_M_to_Z.cpp
+         CPUState.cpp
+         CPUReadWriteListener.cpp
+         Operations_R_to_T.cpp
+         Operations_J_to_P.cpp
+         Operations_Undoc_A_to_L.cpp
+         Operations_C_to_I.cpp
+         Operations_A_to_B.cpp
+         Opcodes.cpp
+         InvalidOpcodeHandler.cpp
+         InvalidOpcodeException.cpp
+         AddressModes.cpp
+         CPU.cpp
+         MapperList.cpp
+         Mapper1.cpp
+         Mapper0.cpp
+         iNesRom.cpp
+         Generating Code...
+         Compiling...
+         iNesFileFormatException.cpp
+         CartMapper.cpp
+         TriangleWaveGenerator.cpp
+         SquareWaveGenerator.cpp
+         SoundPlayer.cpp
+         NoiseChannel.cpp
+         FrameSequencer.cpp
+         DMChannel.cpp
+         AudioChannel.cpp
+         APU.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\NES.res" src\platform\win32\NES.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"A:\PROJECTS\NES Emulator\NES\Debug\NES.exe" /INCREMENTAL /NOLOGO /LIBPATH:"A:\PROJECTS\NES Emulator\INPUT\Debug" /LIBPATH:"A:\PROJECTS\NES Emulator\CART\Debug" /LIBPATH:"A:\PROJECTS\NES Emulator\CPU\Debug" /LIBPATH:"A:\PROJECTS\NES Emulator\PPU\Debug" PPU.lib CPU.lib CART.lib INPUT.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"A:\PROJECTS\NES Emulator\NES\Debug\NES.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"A:\PROJECTS\NES Emulator\NES\Debug\NES.lib" /MACHINE:X86 Debug\NES.res
+         Debug\APU.obj
+         Debug\AudioChannel.obj
+         Debug\DMChannel.obj
+         Debug\FrameSequencer.obj
+         Debug\NoiseChannel.obj
+         Debug\SoundPlayer.obj
+         Debug\SquareWaveGenerator.obj
+         Debug\TriangleWaveGenerator.obj
+         Debug\CartMapper.obj
+         Debug\iNesFileFormatException.obj
+         Debug\iNesRom.obj
+         Debug\Mapper0.obj
+         Debug\Mapper1.obj
+         Debug\MapperList.obj
+         Debug\CPU.obj
+         Debug\AddressModes.obj
+         Debug\InvalidOpcodeException.obj
+         Debug\InvalidOpcodeHandler.obj
+         Debug\Opcodes.obj
+         Debug\Operations_A_to_B.obj
+         Debug\Operations_C_to_I.obj
+         Debug\Operations_Undoc_A_to_L.obj
+         Debug\Operations_J_to_P.obj
+         Debug\Operations_R_to_T.obj
+         Debug\CPUReadWriteListener.obj
+         Debug\CPUState.obj
+         Debug\Operations_Undoc_M_to_Z.obj
+         Debug\Emu.obj
+         Debug\Control.obj
+         Debug\InputCollector.obj
+         Debug\InputDevice.obj
+         Debug\InputSystem.obj
+         Debug\StandardPad.obj
+         Debug\AddressSpace.obj
+         Debug\DataFetching.obj
+         Debug\DrawSprites.obj
+         Debug\FrameSequence.obj
+         Debug\Multiplexer.obj
+         Debug\PPU.obj
+         Debug\PPUState.obj
+         Debug\Renderer.obj
+         Debug\ScanlineRoutines.obj
+         Debug\ScrollCounterOps.obj
+         Debug\SpriteEvaluation.obj
+         Debug\GDIRenderer.obj
+         Debug\MainDialog.obj
+         Debug\NES.obj
+         Debug\RomLoader.obj
+         Debug\WaveOutSoundPlayer.obj
+         Debug\Win32InputCollector.obj
+         NES.vcxproj -> A:\PROJECTS\NES Emulator\NES\Debug\NES.exe
+     1>Done Building Project "A:\PROJECTS\NES Emulator\NES\NES\NES.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.98

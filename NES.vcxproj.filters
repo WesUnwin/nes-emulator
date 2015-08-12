@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Win32">
+      <UniqueIdentifier>{530cb40b-53fa-491c-9d04-fe06e8b5bec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Win32">
+      <UniqueIdentifier>{dd55d5ce-c803-48e2-9b1b-9983f68b6d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{c131deaf-4e4e-4edf-a3ad-268b93940794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\cpu">
+      <UniqueIdentifier>{2e788312-6d53-4f1d-a7dc-e3897f623cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\ppu">
+      <UniqueIdentifier>{dd0cb42a-3833-441a-aa42-16479a1e7be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\audio">
+      <UniqueIdentifier>{79219c85-cb9a-4499-b19c-8bc4b8462ab5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\input">
+      <UniqueIdentifier>{53596b4d-9eca-4a15-b434-21a6b69e84ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\cart">
+      <UniqueIdentifier>{c6ae88df-1f2e-4b50-b61a-468763531e0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{70271018-cc91-45d8-91db-272713a3695c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\cpu">
+      <UniqueIdentifier>{b152a15e-ce76-485d-a74d-d0bb60a35653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\ppu">
+      <UniqueIdentifier>{ad4b17aa-b86a-49d2-a37f-5af3b679fbdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\audio">
+      <UniqueIdentifier>{b9d9f05e-2a4a-43b9-86f4-4ed51c9f43d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\input">
+      <UniqueIdentifier>{be29a6b9-509b-49a1-9d48-73ded83a6c47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\cart">
+      <UniqueIdentifier>{1de1d175-a7a9-4d11-8479-9f56d4cdc8fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\Emu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\GDIRenderer.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\MainDialog.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\Resource.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\RomLoader.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\targetver.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\Win32InputCollector.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\CPU.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\AddressSpace.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\DataFetching.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\DefaultMasterPalette.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\DrawSprites.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\FrameSequence.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\Globals.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\Multiplexer.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\PPU.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\PPUState.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\Renderer.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\ScanlineRoutines.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\ScrollCounterOps.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ppu\SpriteEvaluation.h">
+      <Filter>Header Files\core\ppu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\NES.h">
+      <Filter>Header Files\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\Control.h">
+      <Filter>Header Files\core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\InputCollector.h">
+      <Filter>Header Files\core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\InputDevice.h">
+      <Filter>Header Files\core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\InputSystem.h">
+      <Filter>Header Files\core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\StandardPad.h">
+      <Filter>Header Files\core\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\CartMapper.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\iNesFileFormatException.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\iNesRom.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\Mapper0.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\CPUGlobals.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\AddressModes.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\InvalidOpcodeException.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\InvalidOpcodeHandler.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Opcodes.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_A_to_B.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_C_to_I.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_J_to_P.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_R_to_T.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\OperationsHelpers.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\CPUReadWriteListener.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\CPUState.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_Undoc_A_to_L.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cpu\Operations_Undoc_M_to_Z.h">
+      <Filter>Header Files\core\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\Mapper1.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\cart\MapperList.h">
+      <Filter>Header Files\core\cart</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\APU.h">
+      <Filter>Header Files\core\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\NoiseChannel.h">
+      <Filter>Header Files\core\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\SquareWaveGenerator.h">
+      <Filter>Header Files\core\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\TriangleWaveGenerator.h">
+      <Filter>Header Files\core\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\DMChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\AudioChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\SoundPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\apu\FrameSequencer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\win32\WaveOutSoundPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\platform\win32\GDIRenderer.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\win32\MainDialog.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\win32\NES.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\win32\RomLoader.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\win32\Win32InputCollector.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Emu.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\CPU.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\AddressSpace.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\DataFetching.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\DrawSprites.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\FrameSequence.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\Multiplexer.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\PPU.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\PPUState.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\Renderer.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\ScanlineRoutines.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\ScrollCounterOps.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ppu\SpriteEvaluation.cpp">
+      <Filter>Source Files\core\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\Mapper0.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\iNesRom.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\iNesFileFormatException.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\CartMapper.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\StandardPad.cpp">
+      <Filter>Source Files\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\InputSystem.cpp">
+      <Filter>Source Files\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\InputDevice.cpp">
+      <Filter>Source Files\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\InputCollector.cpp">
+      <Filter>Source Files\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\Control.cpp">
+      <Filter>Source Files\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\AddressModes.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\InvalidOpcodeException.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\InvalidOpcodeHandler.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Opcodes.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_A_to_B.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_C_to_I.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_J_to_P.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_R_to_T.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\CPUReadWriteListener.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\CPUState.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_Undoc_M_to_Z.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cpu\Operations_Undoc_A_to_L.cpp">
+      <Filter>Source Files\core\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\Mapper1.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\cart\MapperList.cpp">
+      <Filter>Source Files\core\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\APU.cpp">
+      <Filter>Source Files\core\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\NoiseChannel.cpp">
+      <Filter>Source Files\core\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\SquareWaveGenerator.cpp">
+      <Filter>Source Files\core\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\TriangleWaveGenerator.cpp">
+      <Filter>Source Files\core\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\DMChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\AudioChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\SoundPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\apu\FrameSequencer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\win32\WaveOutSoundPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\platform\win32\NES.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\platform\win32\small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\platform\win32\NES.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
