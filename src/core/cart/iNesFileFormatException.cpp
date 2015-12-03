@@ -7,6 +7,6 @@ iNesFileFormatException::iNesFileFormatException(const char* message)
 }
 
 
-iNesFileFormatException::~iNesFileFormatException()
-{
-}
+//iNesFileFormatException::~iNesFileFormatException()
+//{
+//}

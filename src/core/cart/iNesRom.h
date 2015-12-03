@@ -2,8 +2,8 @@
 #define CART_INESROM_H
 
 #include "CartMapper.h"
-#include "..\CPU\CPU.h"
-#include "..\PPU\PPU.h"
+#include "../cpu/CPU.h"
+#include "../ppu/PPU.h"
 
 #include "MapperList.h"
 
@@ -49,7 +49,7 @@ private:
 	unsigned int prgRomSize; //in bytes
 	unsigned int chrRomSize;
 
-	void iNesRom::constructMapper();
+	void constructMapper();
 };
 
 

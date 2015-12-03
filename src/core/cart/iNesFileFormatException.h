@@ -8,7 +8,7 @@ class iNesFileFormatException : public std::exception
 {
 public:
 	iNesFileFormatException(const char* message);
-	~iNesFileFormatException();
+	//~iNesFileFormatException();
 
 	virtual const char* what() const throw()
 	{

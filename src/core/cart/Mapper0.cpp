@@ -44,12 +44,12 @@ void Mapper0::setupMapper(CPUCore::CPU* cpu, PPUCore::PPU* ppu)
 		ppu->setCHRMemPointer(this->CHRROMBuffer);
 
 	//Set PPU NT Mirroring as desired by ROM file
-	if (this->rom->getNTMirroring() == iNesRom::NTMIRRORRING::NTMIRRORING_HORIZONTAL)
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::HORIZONTAL);
-	else if (this->rom->getNTMirroring() == iNesRom::NTMIRRORRING::NTMIRRORING_VERTICAL)
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::VERTICAL);
-	else if (this->rom->getNTMirroring() == iNesRom::NTMIRRORRING::NTMIRRORING_4NTVRAM)
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::FOURSCREEN);
+	if (this->rom->getNTMirroring() == iNesRom::NTMIRRORING_HORIZONTAL)
+		ppu->setNTMirroring(PPUCore::PPUState::HORIZONTAL);
+	else if (this->rom->getNTMirroring() == iNesRom::NTMIRRORING_VERTICAL)
+		ppu->setNTMirroring(PPUCore::PPUState::VERTICAL);
+	else if (this->rom->getNTMirroring() == iNesRom::NTMIRRORING_4NTVRAM)
+		ppu->setNTMirroring(PPUCore::PPUState::FOURSCREEN);
 }
 
 

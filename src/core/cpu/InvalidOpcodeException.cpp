@@ -18,7 +18,7 @@ namespace CPUCore
 
 	char* InvalidOpcodeException::getMessage()
 	{
-		sprintf_s(this->message, "Invalid opcode: 0x%X encountered at CPU Address: 0x%X", this->opcode, this->state->PC - 1);
+		//sprintf_s(this->message, "Invalid opcode: 0x%X encountered at CPU Address: 0x%X", this->opcode, this->state->PC - 1);
 		return this->message;
 	}
 

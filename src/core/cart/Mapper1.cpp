@@ -131,16 +131,16 @@ void Mapper1::setNTMirroring()
 	switch (mirroringType)
 	{
 	case 0:  //One Screen, lower bank
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::ONESCREEN_LOWER);
+		ppu->setNTMirroring(PPUCore::PPUState::ONESCREEN_LOWER);
 		break;
 	case 1:  //One Screen, upper bank
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::ONESCREEN_UPPER);
+		ppu->setNTMirroring(PPUCore::PPUState::ONESCREEN_UPPER);
 		break;
 	case 2:  //Vertical
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::VERTICAL);
+		ppu->setNTMirroring(PPUCore::PPUState::VERTICAL);
 		break;
 	case 3:  //Horizontal
-		ppu->setNTMirroring(PPUCore::PPUState::NTMIRRORING::HORIZONTAL);
+		ppu->setNTMirroring(PPUCore::PPUState::HORIZONTAL);
 		break;
 	default:
 		break;

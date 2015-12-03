@@ -1,8 +1,8 @@
 #ifndef CART_CARTMAPPER_H
 #define CART_CARTMAPPER_H
 
-#include "..\CPU\CPU.h"
-#include "..\PPU\PPU.h"
+#include "../cpu/CPU.h"
+#include "../ppu/PPU.h"
 class iNesRom; // #include "CART_iNesRom.h"
 
 //Abstract class containing general template and functionality behind a cartridge mapper.

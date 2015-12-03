@@ -145,35 +145,35 @@ void PPUState::setNTMirroring(NTMIRRORING mirroringType)
 {
 	this->mirroring = mirroringType;
 
-	if (this->mirroring == NTMIRRORING::HORIZONTAL)
+	if (this->mirroring == HORIZONTAL)
 	{
 		this->NameTableMemPointers[0] = InternalNameTable0;
 		this->NameTableMemPointers[1] = InternalNameTable0;
 		this->NameTableMemPointers[2] = InternalNameTable1;
 		this->NameTableMemPointers[3] = InternalNameTable1;
 	}
-	else if (this->mirroring == NTMIRRORING::VERTICAL)
+	else if (this->mirroring == VERTICAL)
 	{
 		this->NameTableMemPointers[0] = InternalNameTable0;
 		this->NameTableMemPointers[1] = InternalNameTable1;
 		this->NameTableMemPointers[2] = InternalNameTable0;
 		this->NameTableMemPointers[3] = InternalNameTable1;
 	}
-	else if (this->mirroring == NTMIRRORING::FOURSCREEN)
+	else if (this->mirroring == FOURSCREEN)
 	{
 		this->NameTableMemPointers[0] = InternalNameTable0;
 		this->NameTableMemPointers[1] = InternalNameTable1;
 		this->NameTableMemPointers[2] = InternalNameTable2;
 		this->NameTableMemPointers[3] = InternalNameTable3;
 	}
-	else if (this->mirroring == NTMIRRORING::ONESCREEN_LOWER)
+	else if (this->mirroring == ONESCREEN_LOWER)
 	{
 		this->NameTableMemPointers[0] = InternalNameTable0;
 		this->NameTableMemPointers[1] = InternalNameTable0;
 		this->NameTableMemPointers[2] = InternalNameTable0;
 		this->NameTableMemPointers[3] = InternalNameTable0;
 	}
-	else if (this->mirroring == NTMIRRORING::ONESCREEN_UPPER)
+	else if (this->mirroring == ONESCREEN_UPPER)
 	{
 		this->NameTableMemPointers[0] = InternalNameTable1;
 		this->NameTableMemPointers[1] = InternalNameTable1;

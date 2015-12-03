@@ -6,9 +6,9 @@
 //#include "CART_iNesRom.h"
 
 #include "iNesRom.h"
-#include "..\CPU\CPU.h"
-#include "..\PPU\PPU.h"
-#include "..\ppu\PPUState.h"
+#include "../cpu/CPU.h"
+#include "../ppu/PPU.h"
+#include "../ppu/PPUState.h"
 
 
 
