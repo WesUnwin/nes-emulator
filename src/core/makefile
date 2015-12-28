@@ -1,5 +1,5 @@
 
-all: message cpu_core ppu_core apu_core cart_core input_core
+all: message cpu_core ppu_core apu_core cart_core input_core emu
 
 message:
 	@echo "                                               "
@@ -20,6 +20,9 @@ cart_core:
 
 input_core:
 	cd input && $(MAKE)
+
+emu:
+	g++ -Wall -w -c Emu.cpp -o emu.o
 
 clean:
 	cd cpu && $(MAKE) clean

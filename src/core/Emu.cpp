@@ -68,7 +68,7 @@ void Emu::doFrame()
 		throw e;//MessageBoxA(HWND_DESKTOP, e->getMessage(), "Invalid Opcode", MB_OK);
 	}
 
-	ppu->finishFrame();	
+	ppu->finishFrame();
 
 	ppu->requestRedraw();
 }

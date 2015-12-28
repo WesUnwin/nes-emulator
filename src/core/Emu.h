@@ -1,21 +1,21 @@
 #ifndef EMU_H
 #define EMU_H
 
-#include "cpu\CPU.h"
-#include "cpu\CPUState.h"
-#include "cpu\CPUReadWriteListener.h"
-#include "cpu\InvalidOpcodeException.h"
+#include "cpu/CPU.h"
+#include "cpu/CPUState.h"
+#include "cpu/CPUReadWriteListener.h"
+#include "cpu/InvalidOpcodeException.h"
 
-#include "ppu\PPU.h"
+#include "ppu/PPU.h"
 
-#include "apu\APU.h"
-#include "apu\SoundPlayer.h"
+#include "apu/APU.h"
+#include "apu/SoundPlayer.h"
 
-#include "cart\iNesRom.h"
+#include "cart/iNesRom.h"
 
-#include "input\InputSystem.h"
-#include "input\InputDevice.h"
-#include "input\InputCollector.h"
+#include "input/InputSystem.h"
+#include "input/InputDevice.h"
+#include "input/InputCollector.h"
 
 
 class Emu : public CPUReadWriteListener

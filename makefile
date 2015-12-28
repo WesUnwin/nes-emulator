@@ -4,16 +4,14 @@ CC = g++
 
 CFLAGS = -Wall
 
-CPU_CORE_SOURCES := $(wildcard $(TOP)/src/cpu/*.cpp)
-OBJECTS := $(addprefix $(TOP)/project/obj,$(patsubst $(TOP),,$(SOURCES:%.cpp=%.o)))
+all: core linux
 
-$(OBJECTS): $(TOP)/project/obj/%.o: $(TOP)/%.cpp
-	$(CC) $(CFLAGS) -c -o $@
-
-abc:
-	@echo $(realpath .)/src
-
-
+core:
+	cd src/core && $(MAKE)
+	
+linux: core
+	cd src/platform/linux && $(MAKE)
+	
 clean:
 	@echo "Cleaning up..."
 	rm abc.txt
