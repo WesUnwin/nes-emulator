@@ -11,8 +11,12 @@ public:
 	LinuxInputCollector();
 	~LinuxInputCollector();
 
+	void keydown(int fl_event);
+	void keyup(int fl_event);
 
-	virtual void collectPlayerInput(InputDevice* player1Device, InputDevice* player2Device);
+	virtual void collectPlayerInput(NESInputDevice* player1Device, NESInputDevice* player2Device);
+private:
+	bool start;
 };
 
 

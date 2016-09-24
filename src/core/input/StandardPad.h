@@ -2,10 +2,10 @@
 #define STANDARDPAD_H
 
 #include <string>
-#include "InputDevice.h"
+#include "NESInputDevice.h"
 
 
-class StandardPad : public InputDevice
+class StandardPad : public NESInputDevice
 {
 
 public:

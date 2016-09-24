@@ -2,7 +2,7 @@
 #define INPUT_CONTROL_H
 
 #include <string>
-
+#include "HostInputDevice.h"
 
 class InputControl
 {
@@ -11,6 +11,7 @@ public:
 	{
 
 	}
+	
 	~InputControl()
 	{
 
@@ -26,9 +27,14 @@ public:
 		return type;
 	}
 
+	void setHostKeyBinding(HostInputDevice* hostInputDevice, int hostKey);
+	
 protected:
 	std::string name;
 	const std::string type;
+
+	HostInputDevice* hostInputDevice;
+	int hostKey;
 };
 
 

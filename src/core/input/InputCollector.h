@@ -1,7 +1,7 @@
 #ifndef INPUT_INPUTCOLLECTOR_H
 #define INPUT_INPUTCOLLECTOR_H
 
-#include "InputDevice.h"
+#include "NESInputDevice.h"
 
 /**
 * An abstract class defining the structure of an Input Collector; a class that implements the
@@ -22,7 +22,7 @@ public:
 	* of the current input device for player 1 and 2, and based on the state of the host keyboard/mouse etc
 	* set the state of each control appropriately.
 	*/
-	virtual void collectPlayerInput(InputDevice* player1Device, InputDevice* player2Device) = 0;
+	virtual void collectPlayerInput(NESInputDevice* player1Device, NESInputDevice* player2Device) = 0;
 };
 
 #endif

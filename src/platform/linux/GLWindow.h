@@ -7,20 +7,15 @@
 #include <FL/Fl_Gl_Window.H>
 #include "../../core/ppu/Renderer.h"
 #include "GLRenderer.h"
-
+#include "LinuxKeyboardInputDevice.h"
 
 class GLWindow : public Fl_Gl_Window
 {
 	
 	void draw();
-	int handle(int e) 
-	{
-		switch (e) {
-  			case FL_ENTER: cursor(FL_CURSOR_CROSS); break;
-  			case FL_LEAVE: cursor(FL_CURSOR_DEFAULT); break;
-  		}
-  		return Fl_Gl_Window::handle(e);
-	}
+
+	int handle(int event);
+
 	double lasttime;
 
 	int init;
@@ -32,8 +27,10 @@ class GLWindow : public Fl_Gl_Window
 	void setup();
 
 	GLRenderer* glRenderer;
+	LinuxKeyboardInputDevice* linuxKeyboardInputDevice;
+
 public:
-	GLWindow(GLRenderer* glRenderer, int X, int Y, int W, int H);
+	GLWindow(GLRenderer* glRenderer, LinuxKeyboardInputDevice* linuxKeyboardInputDevice, int X, int Y, int W, int H);
 };
 
 

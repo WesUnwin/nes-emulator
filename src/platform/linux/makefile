@@ -30,8 +30,11 @@ obj/LinuxSoundPlayer.o: LinuxSoundPlayer.cpp obj
 obj/LinuxInputCollector.o: LinuxInputCollector.cpp obj
 	g++ -c $< -o $@
 
+obj/LinuxKeyboardInputDevice.o: LinuxKeyboardInputDevice.cpp obj
+	g++ -c $< -o $@
+
 obj/main.o: main.cpp obj
 	g++ -I/home/user/Desktop/fltk-1.3.3 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT -Wall -w -c $< -o $@
 
-nes: obj/main.o obj/GLRenderer.o obj/LinuxSoundPlayer.o obj/LinuxInputCollector.o obj/GLWindow.o
-	$(CXX) obj/main.o obj/GLRenderer.o obj/LinuxInputCollector.o obj/LinuxSoundPlayer.o obj/GLWindow.o $(LINKFLTK_ALL) ../../core/emu.o ../../core/cpu/libcpu.a ../../core/ppu/libppu.a ../../core/apu/libapu.a ../../core/input/libinput.a ../../core/cart/libcart.a -o nes
+nes: obj/main.o obj/GLRenderer.o obj/LinuxSoundPlayer.o obj/LinuxInputCollector.o obj/GLWindow.o obj/LinuxKeyboardInputDevice.o
+	$(CXX) obj/main.o obj/GLRenderer.o obj/LinuxInputCollector.o obj/LinuxSoundPlayer.o obj/GLWindow.o obj/LinuxKeyboardInputDevice.o $(LINKFLTK_ALL) ../../core/emu.o ../../core/cpu/libcpu.a ../../core/ppu/libppu.a ../../core/apu/libapu.a ../../core/input/libinput.a ../../core/cart/libcart.a -o nes

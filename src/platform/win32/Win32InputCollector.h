@@ -11,6 +11,6 @@ public:
 	~Win32InputCollector();
 
 
-	virtual void collectPlayerInput(InputDevice* player1Device, InputDevice* player2Device);
+	virtual void collectPlayerInput(NESInputDevice* player1Device, NESInputDevice* player2Device);
 };
 

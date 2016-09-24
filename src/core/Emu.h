@@ -14,7 +14,7 @@
 #include "cart/iNesRom.h"
 
 #include "input/InputSystem.h"
-#include "input/InputDevice.h"
+#include "input/NESInputDevice.h"
 #include "input/InputCollector.h"
 
 
@@ -39,7 +39,7 @@ public:
 	unsigned char handleCPUtoPPUAccess(int ppuPortNum, bool write, unsigned char writeValue);
 	unsigned char handleCPUtoMiscPortAccess(unsigned short cpuAddress, bool write, unsigned char writeValue);
 
-	void setInputDevice(int player, InputDevice* inputDevice);
+	void setInputDevice(int player, NESInputDevice* inputDevice);
 
 private:
 	CPUCore::CPU* cpu;

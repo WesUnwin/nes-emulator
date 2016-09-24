@@ -155,10 +155,7 @@ unsigned char Emu::handleCPUtoMiscPortAccess(unsigned short cpuAddress, bool wri
 }
 
 
-
-
-
-void Emu::setInputDevice(int player, InputDevice* inputDevice)
+void Emu::setInputDevice(int player, NESInputDevice* inputDevice)
 {
 	if (player == 1 || player == 2)
 		this->inputSystem->setInputDevice(player, inputDevice);

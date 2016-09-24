@@ -12,7 +12,7 @@ Win32InputCollector::~Win32InputCollector()
 
 
 
-void Win32InputCollector::collectPlayerInput(InputDevice* player1Device, InputDevice* player2Device)
+void Win32InputCollector::collectPlayerInput(NESInputDevice* player1Device, NESInputDevice* player2Device)
 {
 	if (player1Device != 0)
 	{

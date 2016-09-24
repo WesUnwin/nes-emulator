@@ -6,11 +6,11 @@
 #include "Control.h"
 
 
-class InputDevice
+class NESInputDevice
 {
 public:
-	InputDevice();
-	~InputDevice();
+	NESInputDevice();
+	~NESInputDevice();
 
 	virtual const std::string& getDeviceDescription() = 0;
 

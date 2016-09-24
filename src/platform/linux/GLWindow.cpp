@@ -8,8 +8,9 @@
 using namespace std;
 
 
-GLWindow::GLWindow(GLRenderer* glRenderer, int X, int Y, int W, int H) : Fl_Gl_Window(X,Y,W,H,0) {
+GLWindow::GLWindow(GLRenderer* glRenderer, LinuxKeyboardInputDevice* linuxKeyboardInputDevice, int X, int Y, int W, int H) : Fl_Gl_Window(X,Y,W,H,0) {
 	this->glRenderer = glRenderer;
+  this->linuxKeyboardInputDevice = linuxKeyboardInputDevice;
 
 	GLWindowRedrawListener* redrawListener = new GLWindowRedrawListener(this);
 	glRenderer->setRedrawListener(redrawListener);
@@ -17,6 +18,31 @@ GLWindow::GLWindow(GLRenderer* glRenderer, int X, int Y, int W, int H) : Fl_Gl_W
 	lasttime = 0.0;
 	init = 0;
 	texID = 0;
+}
+
+int GLWindow::handle(int event) {
+  switch (event) {
+    case FL_ENTER:
+      cout << "FL_ENTER" << std::endl;
+      cursor(FL_CURSOR_CROSS);
+      break;
+    case FL_LEAVE:
+      cout << "FL_LEAVE" << std::endl;
+      cursor(FL_CURSOR_DEFAULT);
+      break;
+    case FL_KEYUP:
+      cout << "KEY UP" << std::endl;
+      this->linuxKeyboardInputDevice->keyUp(event);
+      return 1;
+      break;
+    case 12: //FL_KEYDOWN
+      cout << "KEY DOWN" << std::endl;
+      this->linuxKeyboardInputDevice->keyDown(event);
+      //int key = FL::event_key(); // == FL_Enter
+      return 1;
+      break;
+  }
+  return Fl_Gl_Window::handle(event);
 }
 
 void GLWindow::draw()
@@ -148,6 +174,7 @@ GLWindowRedrawListener::~GLWindowRedrawListener()
 {
 
 }
+
 
 
 void GLWindowRedrawListener::onRedrawRequest()

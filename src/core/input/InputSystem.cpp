@@ -14,7 +14,7 @@ InputSystem::~InputSystem()
 }
 
 
-void InputSystem::setInputDevice(int player, InputDevice* inputDevice)
+void InputSystem::setInputDevice(int player, NESInputDevice* inputDevice)
 {
 	if (player == 1)
 		this->player1InputDevice = inputDevice;
