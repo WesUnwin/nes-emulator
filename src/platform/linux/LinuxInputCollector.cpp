@@ -23,6 +23,7 @@ void LinuxInputCollector::keyup(int fl_event)
 
 void LinuxInputCollector::collectPlayerInput(NESInputDevice* player1Device, NESInputDevice* player2Device)
 {
+	return;
 	if (player1Device != 0)
 	{
 		for (int i = 0; i < player1Device->getNumberOfControls(); i++)

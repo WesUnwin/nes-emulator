@@ -83,19 +83,19 @@ int main(int argc, char **argv)
 	// Create a Standard Pad (For Player 1) and configure it to use the host's keyboard
 	keyboard = new LinuxKeyboardInputDevice();
 	StandardPad* standardPad = new StandardPad();
-	for(int i = 0; i<standardPad->getNumberOfControls(); i++) {
-		InputControl* control = standardPad->getControl(i);
-		if(control->getName() == "A") {
-			control->setHostKeyBinding((HostInputDevice*) keyboard, (int) 'a');
-		} else if(control->getName() == "B") {
+	// for(int i = 0; i<standardPad->getNumberOfControls(); i++) {
+	// 	InputControl* control = standardPad->getControl(i);
+	// 	if(control->getName() == "A") {
+	// 		control->setHostKeyBinding((HostInputDevice*) keyboard, (int) 'a');
+	// 	} else if(control->getName() == "B") {
 
-		} else if(control->getName() == "Start") {
-			std::cout << "SETTING HOST KEY BINDING FOR STar" << std::endl;
-			control->setHostKeyBinding((HostInputDevice*) keyboard, FL_Enter);
-		} else if(control->getName() == "Select") {
+	// 	} else if(control->getName() == "Start") {
+	// 		std::cout << "SETTING HOST KEY BINDING FOR STar" << std::endl;
+	// 		control->setHostKeyBinding((HostInputDevice*) keyboard, FL_Enter);
+	// 	} else if(control->getName() == "Select") {
 
-		}
-	}
+	// 	}
+	// }
 
 	emu->setInputDevice(1, standardPad);
 
