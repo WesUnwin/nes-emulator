@@ -2,14 +2,17 @@ ifeq '$(OS)' "Windows_NT"
 EXEEXT = .exe
 endif
 
-FLTKCONFIG   = /home/user/Desktop/fltk-1.3.3/fltk-config
+FLTKCONFIG   = /media/user/DATA/projects/fltk-1.3.4-2/fltk-config
 CXX          = $(shell $(FLTKCONFIG) --cxx)
-CXXFLAGS     = $(shell $(FLTKCONFIG) --cxxflags) -Wall -I.
+CXXFLAGS     = $(shell $(FLTKCONFIG) --cxxflags) -Wall -g -I.
 LINKFLTK     = $(shell $(FLTKCONFIG) --ldstaticflags)
 #LINKFLTK_GL  = $(shell $(FLTKCONFIG) --use-gl --ldstaticflags)
 #LINKFLTK_IMG = $(shell $(FLTKCONFIG) --use-images --ldstaticflags)
 LINKFLTK_ALL = $(shell $(FLTKCONFIG) --use-gl --ldstaticflags)
 .SUFFIXES: .cxx .h .fl .o $(EXEEXT)
+
+
+CCFLAGS = -g
 
 LINUX_FOLDER_OBJS = $(wildcard ../*.o)
 
@@ -19,7 +22,7 @@ obj:
 	mkdir -p obj
 
 obj/GLRenderer.o: GLRenderer.cpp obj
-	g++ -c $< -o $@
+	g++ $(CCFLAGS) -c $< -o $@
 
 obj/GLWindow.o: GLWindow.cpp obj
 	g++ -c $< -o $@

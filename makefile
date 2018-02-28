@@ -13,5 +13,6 @@ linux: core
 	cd src/platform/linux && $(MAKE)
 	
 clean:
-	@echo "Cleaning up..."
-	rm abc.txt
+	@echo "Deleting object files..."
+	find . -type f -name '*.o' -delete
+	find . -type f -name '*.a' -delete
