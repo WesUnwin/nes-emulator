@@ -1,7 +1,3 @@
-ifeq '$(OS)' "Windows_NT"
-EXEEXT = .exe
-endif
-
 FLTKCONFIG   = /media/user/DATA/projects/fltk-1.3.4-2/fltk-config
 CXX          = $(shell $(FLTKCONFIG) --cxx)
 CXXFLAGS     = $(shell $(FLTKCONFIG) --cxxflags) -Wall -g -I.
@@ -9,7 +5,6 @@ LINKFLTK     = $(shell $(FLTKCONFIG) --ldstaticflags)
 #LINKFLTK_GL  = $(shell $(FLTKCONFIG) --use-gl --ldstaticflags)
 #LINKFLTK_IMG = $(shell $(FLTKCONFIG) --use-images --ldstaticflags)
 LINKFLTK_ALL = $(shell $(FLTKCONFIG) --use-gl --ldstaticflags)
-.SUFFIXES: .cxx .h .fl .o $(EXEEXT)
 
 
 CCFLAGS = -g
