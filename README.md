@@ -5,8 +5,7 @@ A fun personal project I have being pursuing, both for the pure awesome-ness of 
 
 Not intended to be an extremely accurate, nor stable, nor efficient implementation of an NES emulator, but purely as a fun project.
 
-
-[[https://github.com/WesUnwin/nes-emulato/blob/master/docs/images/screenshot.png|alt=screenshot]]
+![alt text](https://github.com/WesUnwin/nes-emulato/blob/master/docs/images/screenshot.png)
 
 # Building
 Currently somewhat working (with no working input or sound yet) on linux. The emulator has been designed to separate platform
